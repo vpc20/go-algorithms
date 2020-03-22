@@ -22,6 +22,14 @@ func RandomIntArray(arrSize int, intRange int, positiveVal bool) []int {
 			}
 		}
 	}
-
 	return intArr
+}
+
+// RandomString returns a random string of specified length and character set
+func RandomString(maxlen int, charset string) string {
+	var s string
+	for i := 0; i < rand.Intn(maxlen)+1; i++ {
+		s = s + string(charset[rand.Intn(len(charset))])
+	}
+	return s
 }
