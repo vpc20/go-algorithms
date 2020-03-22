@@ -5,6 +5,10 @@ import (
 	"time"
 )
 
+const alphaLower = "abcdefghijklmnopqrstuvwxyz"
+const alphaUpper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+const numbers = "0123456789"
+
 // RandomIntArray returns an array of random integer values
 func RandomIntArray(arrSize int, intRange int, positiveVal bool) []int {
 	rand.Seed(time.Now().UnixNano())
