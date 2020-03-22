@@ -20,10 +20,20 @@ func TestLinearSearch(t *testing.T) {
 		{"test", args{[]int{1, 2, 3, 4, 5}, 5}, 4},
 		{"test", args{[]int{1, 2, 3, 4, 5}, 6}, -1},
 	}
+
+	// type testStruct struct {
+	// 	name string
+	// 	args args
+	// 	want int
+	// }
+	// var tests []testStruct
+
+	// tests = append(tests, testStruct{"test", args{[]int{1, 2, 3, 4, 5}, 6}, -1})
+
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
 			if got := LinearSearch(tt.args.arr, tt.args.n); got != tt.want {
-				t.Errorf("LinearSearch() = %v, want %v", got, tt.want)
+				t.Errorf("LinearSearch(%v, %v) = %v, want %v", tt.args.arr, tt.args.n, got, tt.want)
 			}
 		})
 	}
